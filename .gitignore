@@ -1,0 +1,23 @@
+# Local state and generated artifacts
+data/*
+!data/cusip_aliases.json
+!data/fixtures/
+!data/fixtures/**
+output/
+.venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Tool caches and local OS/editor files
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+*.swp
+*~
+
+# Rendered/private artifacts outside the committed specimen
+*.pdf
+*.png
+*.xlsx
+!examples/scion/*.xlsx
