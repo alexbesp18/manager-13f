@@ -1,0 +1,39 @@
+[project]
+name = "manager13f"
+version = "0.1.0"
+description = "Turn any institutional manager's latest 13F into a one-page intelligence spreadsheet (totals, %, QoQ, Pareto technicals, analyst rankings, emergent WOW signals)."
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.31",
+    "yfinance>=1.3",
+    "pandas>=2.0",
+    "numpy>=1.26",
+    "xlsxwriter>=3.2",
+    "defusedxml>=0.7",
+    "matplotlib>=3.7",
+]
+
+[dependency-groups]
+dev = ["openpyxl>=3.1", "pytest>=8.0", "ruff>=0.6"]
+
+[project.scripts]
+manager13f = "manager13f.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["manager13f"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
