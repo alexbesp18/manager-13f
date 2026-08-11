@@ -1,4 +1,4 @@
-"""Build the cached Scion 13F specimen without network access or credentials.
+"""Build the cached Duquesne 13F specimen without network access or credentials.
 
 The committed JSON is a cached rendering input captured from public filing data.
 It is intentionally point-in-time, not a live filing fetch.
@@ -14,12 +14,12 @@ from manager13f import build, verify
 
 
 ROOT = Path(__file__).resolve().parents[1]
-FIXTURE = ROOT / "data" / "fixtures" / "scion_cached_2025-09-30.json"
+FIXTURE = ROOT / "data" / "fixtures" / "duquesne_cached_2026-03-31.json"
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--out", type=Path, default=ROOT / "output" / "scion_cached_demo.xlsx")
+    parser.add_argument("--out", type=Path, default=ROOT / "output" / "duquesne_cached_demo.xlsx")
     args = parser.parse_args()
 
     data = json.loads(FIXTURE.read_text())

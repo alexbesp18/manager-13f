@@ -2,7 +2,7 @@
 
 ## Specimen
 
-[Download the cached Scion Asset Management (Michael Burry) 13F intelligence sheet](examples/scion/scion_asset_management__llc_2025-09-30.xlsx). It is a point-in-time specimen for the 2025-09-30 reporting period, filed 2025-11-03. The workbook is derived from public filing data; it is not a current portfolio view or a trading recommendation.
+[Download the cached Duquesne Family Office (Stan Druckenmiller) 13F intelligence sheet](examples/duquesne/duquesne_family_office_llc_2026-03-31.xlsx). It is a point-in-time specimen for the 2026-03-31 reporting period, filed 2026-05-15. The workbook is derived from public filing data; it is not a current portfolio view or a trading recommendation.
 
 ## The problem
 
@@ -29,17 +29,17 @@ No 13F can establish trade dates, cost basis, delta-adjusted exposure, the long/
 
 ## Test coverage
 
-The suite contains 33 offline tests: pure sleeve and QoQ analytics, value-scale inference, deep-history transforms, workbook structure, the clean-open adapter, and a committed cached-Scion fixture that builds a workbook without credentials or network access. It does not test live SEC, OpenFIGI, or market-data responses; those are deliberately excluded from the offline suite rather than silently mocked.
+The suite contains 33 offline tests: pure sleeve and QoQ analytics, value-scale inference, deep-history transforms, workbook structure, the clean-open adapter, and a committed cached-Duquesne fixture that builds a workbook without credentials or network access. It does not test live SEC, OpenFIGI, or market-data responses; those are deliberately excluded from the offline suite rather than silently mocked.
 
 ## Quickstart
 
 ```bash
 uv sync
 uv run pytest
-uv run python examples/build_cached_scion_demo.py
+uv run python examples/build_cached_duquesne_demo.py
 ```
 
-The final command builds `output/scion_cached_demo.xlsx` from a committed cached rendering input. It uses zero keys and makes zero network calls.
+The final command builds `output/duquesne_cached_demo.xlsx` from a committed cached rendering input. It uses zero keys and makes zero network calls.
 
 For a live filing fetch after setting an appropriate SEC user agent:
 

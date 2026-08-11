@@ -2,7 +2,7 @@
 
 manager13f "Example Capital"
 manager13f --cik 0000000001
-manager13f --cik 0001649339 -o output/scion.xlsx
+manager13f --cik 0001536411 -o output/duquesne.xlsx
 """
 
 from __future__ import annotations
