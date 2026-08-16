@@ -2,6 +2,9 @@
 
 ## Specimen
 
+<a href="docs/specimen-duquesne-full.png"><img alt="Duquesne Family Office 13F intelligence sheet — header band (gross, long, call overlay, put overlay, net, positions, QoQ) and holdings grouped by sleeve with weight, QoQ action, price, YTD, RSI and analyst consensus" src="docs/specimen-duquesne-top.png" width="100%"></a>
+<sub>Top of the one-page sheet the keyless demo builds (`uv run python examples/build_cached_duquesne_demo.py`); click for the full page. Rendered from the committed fixture, no keys, no network.</sub>
+
 [Download the cached Duquesne Family Office (Stan Druckenmiller) 13F intelligence sheet](examples/duquesne/duquesne_family_office_llc_2026-03-31.xlsx). It is a point-in-time specimen for the 2026-03-31 reporting period, filed 2026-05-15. The workbook is derived from public filing data; it is not a current portfolio view or a trading recommendation.
 
 ## The problem
